@@ -58,7 +58,7 @@
                 </ul>
                 <ul class="nav navbar-nav navbar-right">
                     <li>
-                        <a data-toggle="modal" data-target="#loginModal">
+                        <a href="#" id="login_link"> <!-- data-toggle="modal" data-target="#loginModal"-->
                             <span class="glyphicon glyphicon-log-in"></span> Login
                         </a>
                     </li>
@@ -109,7 +109,8 @@
                 </div>
                 <div class="col-xs-12 col-sm-2">
                     <p style="padding:40px;"></p>
-                    <a type ="button" class="btn btn-warning btn-block" title="Or call us at +852 12345678" href="#" data-toggle="modal" data-target="#reserveModal">Reserve table</a>
+                    <a type ="button" class="btn btn-warning btn-block" title="Or call us at +852 12345678" href="#" id="reserve_link">Reserve table</a>
+                    <!-- data-toggle="modal" data-target="#reserveModal" -->
                 </div>
             </div>
             
@@ -374,6 +375,14 @@
             
             $("#carousel-play").click(function() {
                 $("#mycarousel").carousel('cycle');
+            });
+
+            $("#login_link").click(function() {
+                $("#loginModal").modal('show');
+            });
+
+            $("#reserve_link").click(function() {
+                $("#reserveModal").modal('show');
             });
         });
     </script>
